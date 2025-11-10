@@ -1,5 +1,13 @@
 return {
   "neovim/nvim-lspconfig",
+  keys = {
+    -- Disable LazyVim's default gr* keymaps
+    { "gra", false },
+    { "grn", false },
+    { "grr", false },
+    { "gri", false },
+    { "grt", false },
+  },
   opts = {
     servers = {
       biome = {},

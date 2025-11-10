@@ -1,6 +1,7 @@
 return {
   {
     "saghen/blink.cmp",
+    version = "v1.*",
     dependencies = {
       "Kaiser-Yang/blink-cmp-git",
     },

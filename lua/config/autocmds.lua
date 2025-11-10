@@ -26,3 +26,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   end,
 })
 
+-- Auto-close quickfix/location list after selection
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "qf",
+  callback = function()
+    vim.keymap.set("n", "<CR>", "<CR>:cclose<CR>:lclose<CR>", { buffer = true, silent = true })
+  end,
+})
+
